@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="575.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.starov.ranking.view.ImportStageOneController">
+   <children>
+      <Label prefHeight="33.0" prefWidth="180.0" text="Step 1" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font name="Calibri Bold Italic" size="25.0" />
+         </font>
+      </Label>
+      <HBox layoutX="6.0" layoutY="82.0" spacing="10.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="80.0">
+         <children>
+            <Label layoutX="6.0" layoutY="85.0" prefHeight="20.0" prefWidth="90.0" text="Competition">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="fxCompetitionName" layoutX="155.0" layoutY="82.0" prefHeight="25.0" prefWidth="669.0" />
+         </children>
+      </HBox>
+      <Label prefHeight="20.0" prefWidth="418.0" text="The following data has been parsed and will be imported into DB " AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="55.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <HBox spacing="20.0" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="15.0">
+         <children>
+            <Button layoutX="452.0" layoutY="512.0" mnemonicParsing="false" onAction="#cancel" prefHeight="25.0" prefWidth="149.0" text="Cancel" />
+            <Button layoutX="602.0" layoutY="512.0" mnemonicParsing="false" onAction="#doImport" prefHeight="25.0" prefWidth="149.0" text="Import" />
+         </children>
+      </HBox>
+      <HBox layoutX="20.0" layoutY="523.0" spacing="10.0" AnchorPane.bottomAnchor="32.0" AnchorPane.leftAnchor="15.0">
+         <children>
+            <Label layoutX="20.0" layoutY="523.0" prefHeight="20.0" prefWidth="62.0" text="Runners:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="fxRunners" layoutX="73.0" layoutY="523.0" prefHeight="20.0" prefWidth="129.0" text="Label">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="155.0" layoutY="523.0" prefHeight="20.0" prefWidth="51.0" text="Groups:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="fxGroups" layoutX="197.0" layoutY="523.0" prefHeight="20.0" prefWidth="79.0" text="Label">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <TableView fx:id="fxRunnersTable" layoutX="15.0" layoutY="109.0" prefHeight="400.0" prefWidth="770.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="110.0">
+         <columns>
+            <TableColumn fx:id="fxGroup" prefWidth="47.0" text="Group" />
+            <TableColumn fx:id="fxName" prefWidth="204.0" text="Name" />
+            <TableColumn fx:id="fxClub" prefWidth="182.0" text="Club" />
+            <TableColumn fx:id="fxQualification" prefWidth="93.0" text="Qualification" />
+            <TableColumn fx:id="fxTime" minWidth="0.0" prefWidth="69.0" text="Time" />
+            <TableColumn fx:id="fxTimeAfter" prefWidth="78.0" text="Time After" />
+            <TableColumn fx:id="fxPlace" minWidth="4.0" prefWidth="99.0" text="Place" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.5" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.starov.ranking.view.HomeSceneController">
+  <items>
+    <AnchorPane>
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="33.0" prefWidth="180.0" text="Home" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font name="Calibri Bold Italic" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="60.0" prefHeight="17.0" prefWidth="74.0" text="Statistic" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="55.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <GridPane hgap="5.0" layoutX="14.0" layoutY="87.0" vgap="5.0" AnchorPane.leftAnchor="15.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label layoutX="14.0" layoutY="90.0" prefHeight="20.0" prefWidth="129.0" text="Competitons">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="137.0" prefHeight="20.0" prefWidth="129.0" text="Clubs" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="114.0" prefHeight="20.0" prefWidth="129.0" text="Runners" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="fxCompetitionsInDB" prefHeight="17.0" prefWidth="126.0" text="Label" GridPane.columnIndex="1" />
+                  <Label fx:id="fxRunnersInDB" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="fxGroupsInDB" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <ListView fx:id="fxAvailableCompetitions" layoutX="14.0" layoutY="164.0" prefHeight="316.0" prefWidth="369.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="170.0" />
+            <VBox layoutX="262.0" layoutY="508.0" spacing="20.0" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="20.0">
+               <children>
+                  <CheckBox fx:id="fxQuickImport" layoutX="262.0" layoutY="508.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="114.0" text="Quick Import" AnchorPane.leftAnchor="262.0" />
+                  <Button layoutX="262.0" layoutY="540.0" mnemonicParsing="false" onAction="#doImportStageOne" prefHeight="25.0" prefWidth="114.0" text="Import" AnchorPane.rightAnchor="10.0" />
+               </children>
+            </VBox>
+            <ProgressBar fx:id="fxProgress" layoutX="10.0" layoutY="494.0" prefHeight="18.0" prefWidth="233.0" progress="0.0" AnchorPane.bottomAnchor="74.0" AnchorPane.leftAnchor="10.0" />
+         </children></AnchorPane>
+    <AnchorPane>
+         <children>
+            <ListView fx:id="fxLatestImported" layoutX="14.0" layoutY="33.0" prefHeight="540.0" prefWidth="369.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="35.0" />
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="20.0" prefWidth="129.0" text="Latest Imported" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

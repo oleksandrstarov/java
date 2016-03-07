@@ -1,0 +1,2 @@
+28.10.2015
+Building Workspace, creating project, setting up SVN. Connect to Java FX, create blank window and MainApp class
